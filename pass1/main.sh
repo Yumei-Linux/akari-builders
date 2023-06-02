@@ -1,7 +1,7 @@
-. configure.sh ${@}
+. $(dirname $0)/configure.sh ${@}
 
 for item in $(ls ./); do
     if [[ "$item" != "configure.sh" && "$item" != "main.sh" ]]; then
-        . "$item" ${@}
+        . $(dirname $0)/$item ${@}
     fi
 done
