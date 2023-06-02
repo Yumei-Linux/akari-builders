@@ -1,5 +1,3 @@
-. configure.sh ${@}
-
 into_source binutils-2.40
 
 mkdir -pv build ; cd build
