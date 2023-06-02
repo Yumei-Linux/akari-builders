@@ -1,7 +1,14 @@
-. $(dirname $0)/configure.sh ${@}
+right_pth() {
+    cd ${@}/sources/builders/pass1
+}
+
+right_pth
+
+. configure.sh ${@}
 
 for item in $(ls ./); do
     if [[ "$item" != "configure.sh" && "$item" != "main.sh" ]]; then
-        . $(dirname $0)/$item ${@}
+        right_pth
+        . $item ${@}
     fi
 done
