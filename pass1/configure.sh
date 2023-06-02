@@ -2,7 +2,11 @@ export ROOT=${@}
 export SOURCE_ROOT=${ROOT}/sources
 export YUMEI_TGT=$(uname -m)-yumei-linux-gnu
 export CONFIG_SITE=$ROOT/usr/share/config.site
+export MAKEFLAGS="-j6"
 export LC_ALL=POSIX
+
+# configuring make
+alias make="make ${MAKEFLAGS}"
 
 # configuring PATH
 PATH=/usr/bin
