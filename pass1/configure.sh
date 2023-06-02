@@ -15,6 +15,11 @@ PATH=$ROOT/tools/bin:$PATH
 export PATH
 
 into_source() {
-    tar -xvf "${SOURCE_ROOT}/${@}.*"
-    cd "${SOURCE_ROOT}/${@}"
+    cd ${SOURCE_ROOT}
+    if [ -d ${@} ]; then
+        rm -rvf ${@}
+    fi
+
+    tar -xvf ${SOURCE_ROOT}/${@}.*
+    cd ${SOURCE_ROOT}/${@}
 }
