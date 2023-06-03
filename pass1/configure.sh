@@ -9,12 +9,11 @@ export LC_ALL=POSIX
 alias make="make ${MAKEFLAGS}"
 
 # configuring PATH
-PATH=/usr/bin
+PATH=/usr/bin:$ROOT/tools/bin:$PATH
+
 if [ ! -L /bin ]; then
     PATH=/bin:$PATH
 fi
-
-PATH=$ROOT/tools/bin:$PATH
 
 export PATH
 
