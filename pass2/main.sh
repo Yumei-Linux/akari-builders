@@ -1,5 +1,5 @@
 right_pth() {
-    cd ${@}/sources/builders/pass1
+    cd ${@}/sources/builders/pass2
 }
 
 right_pth ${@}
