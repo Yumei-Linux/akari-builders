@@ -1,14 +1,17 @@
 right_pth() {
-    cd ${@}/sources/builders/pass2
+    cd ${@}/sources/builders/pass1
 }
 
 right_pth ${@}
 
 . configure.sh ${@}
 
-for item in $(ls ./); do
-    if [[ "$item" != "configure.sh" && "$item" != "main.sh" ]]; then
-        right_pth ${@}
-        . $item ${@} || exit 1
-    fi
+packages=(
+    binutils.sh
+    gcc.sh
+)
+
+for pkg in ${packages[@]}; do
+    right_pth ${@}
+    . $pkg ${@} || exit 1
 done
