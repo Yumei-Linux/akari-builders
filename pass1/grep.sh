@@ -1,4 +1,4 @@
-into_source grep-3.8
+into_source grep-3.11
 
 ./configure --prefix=/usr \
     --host=$YUMEI_TGT

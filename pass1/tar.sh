@@ -1,4 +1,4 @@
-into_source tar-1.34
+into_source tar-1.35
 
 ./configure --prefix=/usr \
     --host=$YUMEI_TGT \

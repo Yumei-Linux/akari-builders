@@ -1,4 +1,4 @@
-into_source coreutils-9.1
+into_source coreutils-9.3
 
 ./configure --prefix=/usr \
     --host=$YUMEI_TGT \

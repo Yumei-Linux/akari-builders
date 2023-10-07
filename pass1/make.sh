@@ -1,4 +1,4 @@
-into_source make-4.4
+into_source make-4.4.1
 
 sed -e '/ifdef SIGPIPE/,+2 d' \
     -e '/undef FATAL_SIG/i FATAL_SIG (SIGPIPE);' \

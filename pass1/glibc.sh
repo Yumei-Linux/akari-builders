@@ -1,4 +1,4 @@
-into_source glibc-2.37
+into_source glibc-2.38
 
 case $(uname -m) in
     i?86) ln -sfv ld-linux.so.2 $ROOT/lib/ld-lsb.so.3
@@ -8,7 +8,7 @@ case $(uname -m) in
     ;;
 esac
 
-patch -Np1 -i ../glibc-2.37-fhs-1.patch
+patch -Np1 -i ../glibc-2.38-fhs-1.patch
 
 mkdir -pv build ; cd build
 
@@ -26,4 +26,4 @@ make DESTDIR=$ROOT install
 
 sed '/RTLDLIST=/s@/usr@@g' -i $ROOT/usr/bin/ldd
 
-$ROOT/tools/libexec/gcc/$YUMEI_TGT/12.2.0/install-tools/mkheaders
+$ROOT/tools/libexec/gcc/$YUMEI_TGT/13.2.0/install-tools/mkheaders

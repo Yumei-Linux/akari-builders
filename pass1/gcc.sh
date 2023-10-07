@@ -1,11 +1,11 @@
-into_source gcc-12.2.0
+into_source gcc-13.2.0
 
 tar -xvf ../mpfr-4.2.0.tar.xz
-tar -xvf ../gmp-6.2.1.tar.xz
+tar -xvf ../gmp-6.3.0.tar.xz
 tar -xvf ../mpc-1.3.1.tar.gz
 
 mv -v mpfr-4.2.0 mpfr
-mv -v gmp-6.2.1 gmp
+mv -v gmp-6.3.0 gmp
 mv -v mpc-1.3.1 mpc
 
 case $(uname -m) in
@@ -20,7 +20,7 @@ mkdir -pv build ; cd build
 ../configure \
     --target=$YUMEI_TGT \
     --prefix=$ROOT/tools \
-    --with-glibc-version=2.37 \
+    --with-glibc-version=2.38 \
     --with-sysroot=$ROOT \
     --with-newlib \
     --without-headers \

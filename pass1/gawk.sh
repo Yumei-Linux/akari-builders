@@ -1,4 +1,4 @@
-into_source gawk-5.2.1
+into_source gawk-5.2.2
 
 sed -i 's/extras//' Makefile.in
 
